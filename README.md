@@ -40,9 +40,10 @@ Você pode mexer nas configurações para colocar os parâmetros desejados.
 
 ![image](https://github.com/user-attachments/assets/f7a8ed30-1260-4bd1-8110-25c52e4a1cf1)
 
+Use o botão para ativar e desativar o consumo de energia.
 <h2>Link da simulação</h2>
 
 https://wokwi.com/projects/414479088758888449
 
 <h2>Restrições</h2>
-Dados não podem ser 100% exatos por não considerarem influências externas como temperatura e taxa de descarga.
+Dados podem não serem 100% exatos por não considerarem influências externas como temperatura e taxa de descarga.
