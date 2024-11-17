@@ -1,0 +1,1 @@
+# GS-Computing-Edge-Simulador-Painel-Solar
