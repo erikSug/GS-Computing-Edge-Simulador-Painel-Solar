@@ -1,5 +1,5 @@
 # GS-Computing-Edge-Simulador-Painel-Solar
-Um dos principais problemas da energia limpa é o seu alto custo de compra e manutenção, podendo desencorajar grande parte da população. Por isso, nosso grupo desenvolveu um simulador de painel solar no Arduíno com o objetivo de testar e identificar com precisão as medidas com melhor custo benefício.
+Um dos principais problemas da energia limpa é o seu alto custo de compra e manutenção, desencorajando grande parte da população. Por isso, nosso grupo desenvolveu um simulador de painel solar no Arduíno com o objetivo de testar e identificar com precisão as medidas com melhor custo benefício.
 <h2>Sobre o projeto</h2>
 Este projeto tem o principal objetivo de simular um painel solar usando parâmetros definidos pelo usuário. O circuito:
 <ul>
@@ -26,3 +26,23 @@ Este projeto tem o principal objetivo de simular um painel solar usando parâmet
   <li>IDE do Arduino</li>
   <li>Biblioteca LiquidCrystal I2C</li>
 </ul>
+
+<h2>Instalação</h2>
+<ol>
+  <li>Conecte o arduino ao computador.</li>
+  <li>Coloque o código .ino ao IDE do arduíno.</li>
+  <li>Instale a Biblioteca LiquidCrystal I2C.</li>
+  <li>Carregue o código.</li>
+</ol>
+
+<h2>Como usar</h2>
+Você pode mexer nas configurações para colocar os parâmetros desejados.
+
+![image](https://github.com/user-attachments/assets/f7a8ed30-1260-4bd1-8110-25c52e4a1cf1)
+
+<h2>Link da simulação</h2>
+
+https://wokwi.com/projects/414479088758888449
+
+<h2>Restrições</h2>
+Dados não podem ser 100% exatos por não considerarem influências externas como temperatura e taxa de descarga.
