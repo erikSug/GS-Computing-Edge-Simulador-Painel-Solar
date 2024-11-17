@@ -5,7 +5,7 @@ Este projeto tem o principal objetivo de simular um painel solar usando parâmet
 <ul>
   <li>Mostra a porcentagem da bateria através do display(LCD).</li>
   <li>Pode ativar e desativar o modo consumo através de um botão.</li>
-  <li>Mostra a porcentagem da bateria através do display(LCD).</li>
-  <li>Mostra a porcentagem da bateria através do display(LCD).</li>
-  <li>Mostra a porcentagem da bateria através do display(LCD).</li>
+  <li>Possui um sistema de threshold de bateria, desativa a obtenção de energia da bateria e reativa quando estiver abaixo do limite colocado pelo usuário.</li>
+  <li>Consegue converter valores da área da superfície do painel de milimetros e centímetros para metros quadrados.</li>
+  <li>Consegue fazer a simulação tanto em tempo real como por hora.</li>
 </ul>
