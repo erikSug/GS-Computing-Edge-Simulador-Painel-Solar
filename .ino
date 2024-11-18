@@ -5,8 +5,8 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 ////////////////CONFIGURAÇÕES/////////////////////////////////////////
 //PLACA SOLAR
-const float potencia_painel = 10; // Potência do painel solar em Watts
-const float capacidade_bateria = 84; // Carga da bateria em Watts
+const float potencia_painel = 60; // Potência do painel solar em Watts-Pico
+const float capacidade_bateria = 480; // Carga da bateria em Watts
 
 //DIMENSÃO DA PLACA
 const float altura_painel = 25; // Altura do painel solar
@@ -14,15 +14,16 @@ const float largura_painel = 27; // Largura do painel solar
 String medida_painel = "cm"; // Tipo da medida do painel solar, pode ser escrito "m","cm" ou "mm"
 
 //LAMPADAS
-const int lampadas = 8; // Quantidade de lampadas que vai consumir a bateria
+const int lampadas = 5; // Quantidade de lampadas que vai consumir a bateria
 const int potencia_lampada = 10; // Potência das lampadas em Watts
 
 //SISTEMA DE BATERIA 
 const int porcentagem_desativar = 95; // Porcentagem da bateria para desativar para evitar sobrecarga
-const int porcentagem_ativar = 80; // Porcentagem da bateria para reativar a transferência de potência, após ter chegado no limite
+const int porcentagem_ativar = 80; // Porcentagem da bateria para reativar a transferência de potência após ter chegado no limite
 
 //MODO HORA
-const int modo_hora = 0; // Modo hora: 0 - Todo processo é feito por segundo || 1 - Todo processo é feito por hora (Não converte para segundos)
+const int modo_hora = 1; // Modo hora: 0 - Todo processo é feito por segundo
+                        // 1 - Todo processo é feito por hora (Não converte para segundos)
 
 //DEBUG
 const int aumento_debug = 0; // Utilize apenas para debug, aumento da bateria direta
@@ -99,7 +100,6 @@ float converterLux(){
   float resistance = 2000 * voltage / (1 - voltage / 5);
   float lux = pow(RL10 * 1e3 * pow(10, GAMMA) / resistance, (1 / GAMMA));
 
-  Serial.println(lux);
 
   return lux;
 }
@@ -110,7 +110,7 @@ void aumento(){
   float lux = converterLux();
 
 
-  float incremento = ((lux * area_painel)/conversao_lux) / conversao_hora;
+  float incremento = (((lux * area_painel)/conversao_lux) * potencia_painel) / conversao_hora;
   Serial.println(incremento);
   carga_bateria += incremento + aumento_debug;
   Serial.println(carga_bateria);
@@ -124,7 +124,7 @@ void consumo(){
   Serial.println("Consumindo...");
   float potencia_resultado = (lampadas * potencia_lampada)/ conversao_hora;
   carga_bateria -= potencia_resultado + consumo_debug; 
-
+  Serial.println(potencia_resultado);
   if (carga_bateria <= 0){
     carga_bateria = 0;
   }
