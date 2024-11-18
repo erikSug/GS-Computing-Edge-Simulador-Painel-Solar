@@ -45,5 +45,4 @@ Use o botão para ativar e desativar o consumo de energia.
 
 https://wokwi.com/projects/414479088758888449
 
-<h2>Restrições</h2>
-Dados podem não serem 100% exatos por não considerarem influências externas como temperatura e taxa de descarga.
+
