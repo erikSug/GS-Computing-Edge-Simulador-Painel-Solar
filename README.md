@@ -45,4 +45,6 @@ Use o botão para ativar e desativar o consumo de energia.
 
 https://wokwi.com/projects/414479088758888449
 
+<h2>Video</h2>
 
+https://youtu.be/2I1FvHK1cTE
